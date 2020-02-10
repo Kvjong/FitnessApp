@@ -180,6 +180,11 @@ html, body {
   opacity: 100;
 }
 
+.intro {
+padding-top: 40px;
+  
+}
+
 .clean-block.clean-hero .text {
   border-width: 2px;
   border-color: black;
