@@ -180,11 +180,6 @@ html, body {
   opacity: 100;
 }
 
-.intro {
-padding-top: 40px;
-  
-}
-
 .clean-block.clean-hero .text {
   border-width: 2px;
   border-color: black;
@@ -204,7 +199,7 @@ padding-top: 40px;
 
 .clean-block .block-heading p {
   text-align: center;
-  max-width: 600px;
+  max-width: 1000px;
   margin: auto;
   opacity: .7;
 }
@@ -237,5 +232,12 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   font-size: 16px;
   max-width: 700px;
   margin: 0 auto;
+}
+
+.text-center {
+}
+
+.intro {
+  padding-top: 30px;
 }
 
