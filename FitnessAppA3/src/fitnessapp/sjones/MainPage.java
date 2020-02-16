@@ -15,7 +15,7 @@ public class MainPage extends ScreenMain {
             welcome.setFont(new Font("Calibri", Font.BOLD,16));
             AccountCreationScreen.addComponent(this,welcome,1,0,5,1,1,1,GridBagConstraints.CENTER,GridBagConstraints.VERTICAL);
 
-            FButton foodDiary = new FButton("FOOD DIARY",140,40,"yellow");
+            FButton foodDiary = new FButton("FOOD DIARY",140,40,"white");
             foodDiary.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
@@ -26,23 +26,40 @@ public class MainPage extends ScreenMain {
                 }
             });
 
-            FButton workoutProgram= new FButton("WORKOUT PROGRAM",140,40,"yellow");
+            FButton workoutProgram= new FButton("WORKOUT PROGRAM",140,40,"white");
             workoutProgram.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    //workoutpage to be implemented
+                    WorkoutProgramScreen workoutProgramScreen = new WorkoutProgramScreen(frame);
+
+                    frame.setContentPane(workoutProgramScreen);
+                    frame.validate();
+                    frame.repaint();
                 }
             });
 
-            FButton progressTracker = new FButton("PROGRESS TRACKER",140,40,"yellow");
+            FButton progressTracker = new FButton("PROGRESS TRACKER",140,40,"white");
             progressTracker.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    ProgressTrackerScreen progressTrackerScreen = new ProgressTrackerScreen();
+                    frame.setContentPane(progressTrackerScreen);
+                    frame.validate();
+                    frame.repaint();
 
                 }
             });
 
-            FButton educationalContent = new FButton("EDU MODULES",140,40,"yellow");
+            FButton educationalContent = new FButton("EDU MODULES",140,40,"white");
+            educationalContent.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                EducationModulesScreen educationModulesScreen = new EducationModulesScreen();
+                frame.setContentPane(educationModulesScreen);
+                frame.validate();
+                frame.repaint();
+                }
+            });
 
             addComponent(this,foodDiary,0,1,2,1,.5,1,GridBagConstraints.NORTH,GridBagConstraints.NONE);
             addComponent(this,workoutProgram,2,1,2,1,.5,1,GridBagConstraints.NORTH,GridBagConstraints.NONE);

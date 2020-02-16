@@ -116,12 +116,39 @@ public class FitnessApp {
 
         Menu m2 = new Menu("Diet");
         MenuItem m21foodDiary = new MenuItem("Food Diary");
+        m21foodDiary.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                FoodDiary foodDiary = new FoodDiary(frame);
+                frame.setContentPane(foodDiary);
+                frame.validate();
+                frame.repaint();
+
+            }
+        });
         MenuItem m22mealPlans = new MenuItem("Meal Plans");
 
 
         Menu m3 = new Menu("Workout");
         MenuItem m31workoutDiary = new MenuItem("Workout Diary");
+        m31workoutDiary.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+               //
+            }
+
+        });
         MenuItem m32yourProgram = new MenuItem("Your Program");
+        m32yourProgram.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                WorkoutProgramScreen workoutProgramScreen = new WorkoutProgramScreen(frame);
+
+                frame.setContentPane(workoutProgramScreen);
+                frame.validate();
+                frame.repaint();
+            }
+        });
 
 
         Menu m4 = new Menu("Navigation");
@@ -139,11 +166,29 @@ public class FitnessApp {
 
         Menu m5 =  new Menu("Education");
         MenuItem m51eduHome = new MenuItem("Content Page");
+        m51eduHome.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EducationModulesScreen educationModulesScreen = new EducationModulesScreen();
+                frame.setContentPane(educationModulesScreen);
+                frame.validate();
+                frame.repaint();
+            }
+        });
         MenuItem m52eduFood = new MenuItem("Food Modules");
         MenuItem m53eduExercise = new MenuItem("Exercise Modules");
 
         Menu m6 = new Menu("Progress");
         MenuItem m61progressPage = new MenuItem("Progress Page");
+        m61progressPage.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ProgressTrackerScreen progressTrackerScreen = new ProgressTrackerScreen();
+                frame.setContentPane(progressTrackerScreen);
+                frame.validate();
+                frame.repaint();
+            }
+        });
 
 
 //menu 1 build
