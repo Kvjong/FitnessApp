@@ -4,7 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.security.PublicKey;
 
 public class AccountCreationScreen extends ScreenMain {
 
@@ -58,7 +57,7 @@ public class AccountCreationScreen extends ScreenMain {
                FitnessApp.accountOwners.add(new AccountOwner(firstName,lastName,weight,height,age));
 
                JOptionPane.showMessageDialog(nameForm,"User account Created! Returning to Menu.");
-               HomeScreen homeScreen = new HomeScreen(frame);
+               LoginScreen loginScreen = new LoginScreen(frame);
                frame.validate();
                frame.repaint();
 

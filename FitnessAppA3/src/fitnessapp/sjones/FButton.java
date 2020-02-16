@@ -8,8 +8,13 @@ public class FButton extends JButton {
 
 
     public FButton(String text, int w, int h) {
+        this(text,w,h,"white");
+
+    }
+
+    public FButton(String text, int w, int h,String color) {
         super(text);
-        text = "<html><style>body{color:white;}</style><body>" + text + "</body></html>";
+        text = "<html><style>body{color:"+color+";}</style><body>" + text + "</body></html>";
         setFont(new Font("Calibri", Font.BOLD, 14));
         setText(text);
         setBackground(Color.darkGray);

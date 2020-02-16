@@ -9,6 +9,7 @@ public class AccountOwner {
     int age;
     char gender;
     TrainingLevel userTLevel;
+    public final static int calorieGoal = 2000; // this needs to be written like not a moron, for demo only like this
 
   enum TrainingLevel {
       NOVICE,

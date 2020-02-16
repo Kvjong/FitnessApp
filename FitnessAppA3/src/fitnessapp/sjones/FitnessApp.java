@@ -68,7 +68,7 @@ public class FitnessApp {
 
         frame.setMenuBar(mainMenu);
         uiConfig();
-        setHomeScreen(frame);
+        setLoginScreen(frame);
         frame.setLocationRelativeTo(null);
         frame.validate();
         frame.repaint();
@@ -77,10 +77,10 @@ public class FitnessApp {
         return frame;
     }
 
-    public void setHomeScreen(JFrame frame) {
+    public void setLoginScreen(JFrame frame) {
 
-        HomeScreen homeScreen = new HomeScreen(frame);
-        frame.setContentPane(homeScreen);
+        LoginScreen loginScreen = new LoginScreen(frame);
+        frame.setContentPane(loginScreen);
         frame.validate();
         frame.repaint();
     }
@@ -129,10 +129,22 @@ public class FitnessApp {
         m41Home.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                setHomeScreen(frame);
+                MainPage mainPage = new MainPage(frame);
+                frame.setContentPane(mainPage);
+                frame.validate();
+                frame.repaint();
 
             }
         });
+
+        Menu m5 =  new Menu("Education");
+        MenuItem m51eduHome = new MenuItem("Content Page");
+        MenuItem m52eduFood = new MenuItem("Food Modules");
+        MenuItem m53eduExercise = new MenuItem("Exercise Modules");
+
+        Menu m6 = new Menu("Progress");
+        MenuItem m61progressPage = new MenuItem("Progress Page");
+
 
 //menu 1 build
         m1.add(m11newAccount);
@@ -150,11 +162,22 @@ public class FitnessApp {
 //menu 4 build
         m4.add(m41Home);
 
+//menu 5 build
+        m5.add(m51eduHome);
+        m5.add(m52eduFood);
+        m5.add(m53eduExercise);
+
+//menu 6 build
+        m6.add(m61progressPage);
+
+
 
 //mainMenu build
         mainMenu.add(m1);
         mainMenu.add(m2);
         mainMenu.add(m3);
+        mainMenu.add(m5);
+        mainMenu.add(m6);
         mainMenu.add(m4);
 
         return mainMenu;
